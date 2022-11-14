@@ -9,9 +9,15 @@ import { MagicConnector } from "@thirdweb-dev/react/evm/connectors/magic";
 // This is the chainId your dApp will work on.
 const activeChainId = ChainId.Mumbai;
 
+console.log(
+  "process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY",
+  process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY
+);
+
 const magicLinkConnector = new MagicConnector({
   options: {
-    apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
+    apiKey: "pk_live_317C782143644658",
+    // process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
       [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
     },
