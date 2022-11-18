@@ -16,7 +16,7 @@ console.log(
 
 const magicLinkConnector = new MagicConnector({
   options: {
-    apiKey: "pk_live_317C782143644658",
+    apiKey: process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     // process.env.NEXT_PUBLIC_MAGIC_LINK_API_KEY as string,
     rpcUrls: {
       [ChainId.Mumbai]: "https://mumbai.magic.io/rpc",
